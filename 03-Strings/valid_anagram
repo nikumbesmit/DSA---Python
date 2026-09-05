@@ -1,0 +1,30 @@
+#Leetcode - 242. Valid Anagram
+
+# directly using sorting
+def isAnagram(s: str, t: str) -> bool:
+        if len(s) != len(t) :
+            return False
+        
+        return sorted(s) == sorted(t)
+
+# using dictionary
+def is_anagram(s: str, t: str) -> bool : 
+        if len(s) != len(t) :
+            return False
+
+        maps = {}
+        mapt = {}
+
+        for i in s :
+            maps[i] = maps.get(i,0) + 1
+
+        for j in t :
+              mapt[j] = mapt.get(j,0) + 1 
+
+        return maps == mapt         
+
+s = input("Enter first string/word : ")
+t = input("Enter second string/word : ")
+
+print(f"Using Sorting method : {isAnagram(s,t)} ")
+print(f"Using Dictionary : {is_anagram(s,t)}")
