@@ -1,0 +1,19 @@
+# Leetcode - 2095. Delete the Middle Node of a Linked List
+
+class Solution:
+    def deleteMiddle(head) :
+        if not head or not head.next :
+            return None
+
+        slow = fast = head 
+        prev = None
+
+        while fast and fast.next :
+            prev = slow
+            slow = slow.next
+            fast = fast.next.next 
+        
+        if prev :  
+            prev.next = slow.next
+
+        return head
