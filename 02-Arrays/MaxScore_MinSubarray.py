@@ -3,7 +3,7 @@
 class Solution :
     def PairWithMaxSum(self, arr : list[int]) -> int :
 
-        max_sum = float("inf")
+        max_sum = float("-inf")
 
         for i in range(len(arr) - 1) :
             curr_sum = arr[i] + arr[i + 1]
