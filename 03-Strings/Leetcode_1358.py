@@ -15,3 +15,12 @@ class Solution:
                 left += 1
 
         return result
+
+if __name__ == '__main__' :
+    
+    s = input("Enter string: ")
+
+    obj = Solution()
+    result = obj.numberOfSubstrings(s)
+
+    print("Number of valid substrings:", result)
