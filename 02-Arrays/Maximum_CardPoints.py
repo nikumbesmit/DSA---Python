@@ -17,3 +17,13 @@ class Solution:
             min_subarray_sum = min(min_subarray_sum,curr_sum)
         
         return total_sum - min_subarray_sum
+
+if __name__ == "__main__":
+
+    cardPoints = list(map(int, input("Enter card points: ").split()))
+    k = int(input("Enter k: "))
+
+    obj = Solution()
+    result = obj.maxScore(cardPoints, k)
+
+    print("Maximum points:", result)
